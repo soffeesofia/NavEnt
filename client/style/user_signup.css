@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'CAZentrum Condensed Bold';
+    src: url('webdevfinals/res/font/CAZentrum/CAZentrumCondensed-Bold.woff2') format('woff2'),
+         url('webdevfinals/res/font/CAZentrum/CAZentrumCondensed-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal; 
+}
+@font-face {
+    font-family: 'CAZentrum Regular';
+    src: url('webdevfinals/res/font/CAZentrum/CAZentrum-Regular.woff2') format('woff2'),
+         url('webdevfinals/res/font/CAZentrum/CAZentrum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "CAZentrum Condensed Bold", sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000e1e;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.signup-form-container {
+    color: #E4960E;
+    background-color: #1C3947;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: inset -5px -5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+    max-height: 320px;
+    margin-right: 50px;
+}
+
+.signup-form-container {
+    color: #E4960E;
+}
+
+.signup_form {
+    margin: 20px;
+    text-align: center;
+}
+
+.signup_form label {
+    margin-bottom: 8px;
+    display: block; 
+}
+
+.signup_form input,
+.signup_form select {
+    padding: 4px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #F1F1F1;
+    border-radius: 8px;
+}
+
+.signup_form button {
+    font-family: "CAZentrum Regular", sans-serif;
+    padding: 10px 20px;
+    background-color: #E4960E;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.signup_form button:hover {
+    background-color: #EDA92C;
+}

@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'CAZentrum Condensed Bold';
+    src: url('font/CAZentrum/CAZentrumCondensed-Bold.woff2') format('woff2'),
+         url('font/CAZentrum/CAZentrumCondensed-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CAZentrum Regular';
+    src: url('font/CAZentrum/CAZentrum-Regular.woff2') format('woff2'),
+         url('font/CAZentrum/CAZentrum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: CAZentrum Condensed Bold, sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000e1e;
+}
+
+.container {
+    display: flex;
+}
+
+.login-form-container {
+    color: #E4960E;
+    background-color: #1C3947;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: inset -5px -5px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center;
+}
+
+.login_form {
+    margin: 20px;
+    width: 100%;
+    max-width: 300px; /* Adjust the maximum width as needed */
+}
+
+
+.logo {
+    max-height: 320px;
+    margin-right: 50px;
+}
+
+.login_form label {
+    margin-bottom: 8px;
+    display: block; 
+}
+
+.login_form input,
+.login_form select {
+    padding: 4px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #F1F1F1;
+    border-radius: 8px;
+}
+
+.login_form button {
+    font-family: CAZentrum Regular, sans-serif;
+    padding: 10px 20px;
+    background-color: #E4960E;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.login_form button:hover {
+    background-color: #EDA92C;
+}

@@ -1,0 +1,284 @@
+@font-face {
+    font-family: 'Demine';
+    src: url('font/Demine/Demine.woff2') format('woff2'),
+         url('font/Demine/Demine.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CAZentrum Regular';
+    src: url('font/CAZentrum/CAZentrum-Regular.woff2') format('woff2'),
+         url('font/CAZentrum/CAZentrum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CAZentrum Condensed Light';
+    src: url('font/CAZentrum/CAZentrumCondensed-Light.woff2') format('woff2'),
+         url('font/CAZentrum/CAZentrumCondensed-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CAZentrum Medium';
+    src: url('font/CAZentrum/CAZentrumWide-Medium.woff2') format('woff2'),
+         url('font/CAZentrum/CAZentrumWide-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Curiosa ExtraBold';
+    src: url('font/Curiosa/Curiosa-ExtraBold.woff2') format('woff2'),
+         url('font/Curiosa/Curiosa-ExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Curiosa ExtraLight';
+    src: url('font/Curiosa/Curiosa-ExtraLight.woff2') format('woff2'),
+         url('font/Curiosa/Curiosa-ExtraLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #F1F5F8;
+}
+
+header {
+    background-color: #000e1e;
+    color: #F1F1F1;
+    padding: 20px;
+}
+
+.logo img {
+    max-height: 90px;
+    margin: 0;
+    padding: 0;
+}
+
+.pf {
+    height: 40px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px;
+    align-items: center;
+}
+
+.profile-icon {
+    color: #F1F1F1;
+    max-height: 30px;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.pf-dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.pf-dropdown .btn{
+    border: 1px solid #F1F1F1;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: border-color 0.3s ease;
+}
+
+
+.logout-btn{
+    text-decoration: none;
+    /* padding-left: 30px; */
+}
+
+.pf-dropdown .dropdown-menu a.logout-btn {
+    font-family: 'CAZentrum Regular', sans-serif;
+    color: #000e1e;
+    display: flex;
+    justify-content: center;
+}
+
+.pf-dropdown .dropdown-menu :hover,
+.pf-dropdown .dropdown-menu a.logout-btn:focus {
+    background-color: #71999B;
+}
+
+
+.username {
+    color: #F1F1F1;
+    font-family: 'Curiosa ExtraLight', sans-serif;
+    font-weight: 500;
+    flex: 1;
+}
+
+.profile-icon, .username {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E4960E;
+    padding: 10px 20px;
+}
+
+.toHome{
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    color: #F1F1F1;
+    outline: none;
+    cursor: pointer;
+}
+
+.box {
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 10px;
+    background: #F1F1F1;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.box:hover input {
+    font-family: 'Curiosa ExtraLight', sans-serif;
+    width: 200px;
+}
+
+.box input {
+    font-family: 'Curiosa ExtraLight', sans-serif;
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.box a .fas {
+    color: #71999B;
+    font-size: 18px;
+}
+
+.search-icon {
+    color: #71999B;
+}
+
+.table-title {
+    font-family: 'Demine', sans-serif;
+    font-size: 30px; 
+    color: #1C3947; 
+    margin-bottom: 8px;
+  }
+.container {
+    padding: 8px;
+}
+
+.ev-th th {
+    background-color: #1C3947;
+    color: #fff; 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ev-th th {
+    font-family: 'CAZentrum Medium', sans-serif;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+}
+  
+td {
+    font-family: 'CAZentrum Regular', sans-serif;
+    font-size: 13px; 
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*   */
+.btn-group {
+    font-family: 'Curiosa ExtraLight', sans-serif;
+    font-size: 18px;
+}
+
+.crt-btn {
+    font-family: 'Curiosa ExtraBold', sans-serif;
+    background-color: #000e1e;
+    color: #EDA92C;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border 0.3s ease;
+    outline: none;
+}
+  
+.crt-btn:hover {
+    background-color: #EDA92C;
+    color: #000e1e;
+}
+  
+.crt-btn .btn_announce:active {
+    border: 1px solid #000e1e;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    color: #F1F1F1;
+    font-family: 'CAZentrum Condensed Light', sans-serif;
+    font-size: 13px;
+    text-align: center;
+    word-spacing: 2px;
+}
+
+
+.btn_edit {
+    background-color: #EDA92C;
+    color: #000e1e;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.btn_announce {
+    background-color: #e8822e;
+    color: #000e1e;
+    border: none;
+}
+
+.btn_attendance {
+    background-color: #71999B;
+    color: #000e1e;
+    border: none;
+    border-radius: 0 10px 10px 0;
+}
+.footer-bottom {
+    background: #000e1e;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo {
+    max-width: 70px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+footer p {
+    margin: 0;
+}

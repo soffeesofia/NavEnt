@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Attendance | NavEnt</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="/attendance.css">
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+</head>
+  <body>
+    <header>
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+              <img src="/res/imgs/navi-event-logo(3d).png" alt="Logo">
+          </div>
+  
+          <div class="pf-dropdown">
+            <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <div class="d-flex align-items-center">
+  
+                  <div class="pf">
+                    <div class="profile-icon">
+                      <i class="bi bi-person"></i>
+                    </div>
+                    <span class="username">Admin</span>
+                  </div>
+  
+              </div>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="logout-btn" href="#">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+        
+    </header>
+
+    <nav class="search">
+      <div class="nav-links">
+        <button type="button" class="toHome">HOME</button>
+      </div>
+    </nav>
+
+    <div class="cointaner">
+        <div class="py-5 text-center">
+            <i class="bi bi-clipboard-check cb-icon"></i>
+            <h1>Attendance</h1>
+        </div>
+    </div>
+
+    <h4 id="none" style="display: block; margin: 0 auto; text-align: center;"></h2>
+    <div id="onetime" class="container mt-0">
+        <div class="card">
+            <div class="card-body">
+                <h2 id="oneTimeTitle">Event Title</h2>
+                <br>
+                <h4 id="oneTimeTagline">Tagline</h4>
+                <p id="oneTimeDesc">Description</p>
+                <p id="oneTimeVenue">Event Venue</p>
+                <div>
+                    <button type="button" class="btn btn-primary btn-scan-qr"  data-bs-toggle="modal" data-bs-target="#qrModal">
+                        Scan QR
+                    </button>
+                        
+                    <button type="button" class="btn btn-primary btn-add-parti" data-bs-toggle="modal" data-bs-target="#addModal">
+                        Add Participants
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-10"></div>
+                    <div class="col-2 text-right">
+                        <p id="oneTimeDate">Date</p>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover" id="oneTimeTable">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Participant</th>
+                                <th scope="col">In Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>     
+
+    <div id="ampm" class="container mt-3">
+        <div class="card">
+            <div class="card-body">
+                <h2 id="ampmTitle">Event Title</h2>
+                <br>
+                <h4 id="ampmTagline">Tagline</h4>
+                <p id="ampmDesc">Description</p>
+                <p id="venueAM">Event Venue - AM</p>
+                <p id="venuePM">Event Venue - PM</p>
+                <div>
+                    <button type="button" class="btn btn-primary btn-scan-qr" data-bs-toggle="modal" data-bs-target="#qrModal">
+                        Scan QR
+                    </button>
+                        
+                    <button type="button" class="btn btn-primary btn-add-parti" data-bs-toggle="modal" data-bs-target="#addModal">
+                        Add Participants
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-10"></div>
+                    <div class="col-2 text-right">
+                        <p id="ampmDate">Date</p>
+                    </div>
+                </div>
+                <h3>AM Session</h3>
+                <div class="table-responsive AM">
+                    <table class="table table-striped table-hover" id="amTable">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Participant</th>
+                                <th scope="col">In Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>PM Session</h3>
+                <div class="table-responsive PM">
+                    <table class="table table-striped table-hover" id="pmTable">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">Participant</th>
+                                <th scope="col">In Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="series" class="container mt-3">
+        <div class="card">
+            <div class="card-body">
+                <h2 id="seriesTitle">Event Title</h2>
+                <br>
+                <h4 id="seriesTagline">Tagline</h4>
+                <p id="seriesDesc">Description</p>
+                <div>
+                    <button type="button" class="btn btn-primary btn-scan-qr" data-bs-toggle="modal" data-bs-target="#qrModal">
+                        Scan QR
+                    </button>
+                        
+                    <button type="button" class="btn btn-primary btn-add-parti" data-bs-toggle="modal" data-bs-target="#addModal">
+                        Add Participants
+                    </button>
+                </div>
+                <br>
+                <div class="seriesContainer"></div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- QR Modal -->
+    <div class="modal fade" id="qrModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Scan QR Code</h5>
+            <button type="button" class="closeModal" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div id="result"></div>
+                <div class="scanner">
+                <div id="reader"></div>
+            </div>
+            <br>
+            <div class="btn-group dropright dropdown" id="qrSeriesSelect"></div>
+            <p id="msgDropdownQR"></p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary closeModal" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>   
+
+    <!-- Add Participant Modal -->
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add Participant</h5>
+            <button type="button" class="closeModal" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <label for="userID" class="form-label">Enter ID Number: </label>
+                <input id="userID" type="number" class="form-control">
+                <div class="btn-group dropright dropdown" id="partiSeriesSelect"></div>
+                <p id="msgID"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary closeModal" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary btn-addtoRecord" >Save changes</button>
+            </div>
+        </div>
+        </div>
+    </div>   
+
+    <footer>
+        <div class="footer-bottom">
+            <div class="logo">
+                <img src="/res/imgs/navi-event-logo(3d).png" alt="Logo" class="footer-logo">
+            </div>
+            <p>© 2023 NavEnt. A Saint Louis University Company. All Rights Reserved. CS Slot Org ™</p>
+        </div>
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="/attendance.js"></script>
+  </body>
+</html>

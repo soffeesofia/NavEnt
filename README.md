@@ -1,10 +1,10 @@
-# 📅 Event Manager Web Application
+# NaveEnt: Event Manager Web Application
 
 A full-stack event management system built with **Node.js**, **Express.js**, and **PHP**, developed as a finals project for Web Development (CS312) at Saint Louis University, Baguio City.
 
 ---
 
-## 👥 Team Members
+## Team Members
 
 - Bato, Leovide Daniel
 - Dangilan, Ezrha Leigh

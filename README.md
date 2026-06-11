@@ -1,4 +1,4 @@
-# NaveEnt: Event Manager Web Application
+# NavEnt: Event Manager Web Application
 
 A full-stack event management system built with **Node.js**, **Express.js**, and **PHP**, developed as a finals project for Web Development (CS312) at Saint Louis University, Baguio City.
 
@@ -96,7 +96,7 @@ project-root/
 
 ---
 
-## 🗃️ Database Schema
+## Database Schema
 
 The application uses a **MySQL** relational database with the following tables:
 
@@ -132,6 +132,6 @@ The application uses a **MySQL** relational database with the following tables:
 
 ---
 
-## 📄 License
+## License
 
 This project was created for academic purposes at Saint Louis University. All rights reserved by the respective authors.
